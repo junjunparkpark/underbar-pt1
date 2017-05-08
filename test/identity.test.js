@@ -20,4 +20,21 @@ describe('identity()', () => {
     };
     expect(_.identity(val)).toBe(val);
   });
+
+// My Test Additions
+
+/*  Why Doesn't This Pass???
+  it('returns the same output when given 0 divided by 0', () => {
+    const val = 0 / 0
+    expect(_.identity(val)).toBe(val);
+  });
+*/
+
+  it('returns the same output when given a positive number divided by 0', () => {
+    expect(_.identity(5 / 0)).toBe(5 / 0);
+  });
+
+  it('returns the same output when given a negative number divided by 0', () => {
+    expect(_.identity(-5 / 0)).toBe(-5 / 0);
+  });
 });

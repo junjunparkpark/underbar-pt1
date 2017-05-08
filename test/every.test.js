@@ -17,5 +17,12 @@ describe('every()', () => {
       expect(_.every(nums, num => num % 2 === 1)).toBe(false);
     });
 
+
+    // My Test Additions:
+
+    it('returns true if the callback supplied results in Infinity', () => {
+      const nums = [1, 2, 3, 4, 5];
+      expect(_.every(nums, num => num / 0 === Infinity)).toBe(true)
+    });
   });
 });

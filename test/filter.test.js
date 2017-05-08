@@ -23,4 +23,12 @@ describe('filter()', () => {
     const abilityScores = _.filter(characterAttributes, (value) => !isNaN(value));
     expect(abilityScores).toEqual([4, 7, 10, 16, 5, 4]);
   });
+
+  //My Test Additions:
+
+  it('filters all the vowels in a string of words into an array', () => {
+    const str = 'Hack Reactor';
+    const vowels = ['a', 'e', 'i', 'o', 'u'];
+    expect(_.filter(str, value => !vowels.includes(value))).toEqual(['H', 'c', 'k', ' ', 'R', 'c', 't', 'r'])
+  });
 });

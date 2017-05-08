@@ -18,4 +18,11 @@ describe('reject()', () => {
     const orderItems = _.reject(order, (value) => value === null);
     expect(orderItems).toEqual(['burger', 'ketchup', 'cookie']);
   });
+
+  // My Test Additions:
+
+  it('rejects a designated letter from a string', () => {
+    const str = 'google';
+    expect(_.reject(str, letter => letter === 'o')).toEqual(['g', 'g', 'l', 'e']);
+  });
 });

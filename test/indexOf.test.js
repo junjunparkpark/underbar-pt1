@@ -26,4 +26,15 @@ describe('indexOf()', () => {
     expect(_.indexOf(arr, 'bar', 2)).toBe(3);
   });
 
+  // My Test Additions:
+
+  it('returns -1 when given a fromIndex that is larger than the largest index of a given array', () => {
+    const arr = ['foo', 'bar', 'baz', 'bar', 'bar'];
+    expect(_.indexOf(arr, 'bar', 120)).toBe(-1);
+  });
+
+  it('returns the first matching index even when given a negative number as the offset', () => {
+    const arr = ['foo', 'bar', 'baz', 'bar', 'bar'];
+    expect(_.indexOf(arr, 'bar', -10)).toBe(1);
+  });
 });

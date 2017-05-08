@@ -39,5 +39,18 @@ describe('each()', () => {
     });
     expect(count).toBe(3);
   });
+
+  // My Test Additions:
+  
+  it('iterates every index of a string, passing the value at that index, the entire string to the callback', () => {
+    const str = 'hello';
+    let newStr = '';
+    _.each(str, function(value, index, string) {
+      expect(value).toEqual(string[index]);
+      newStr += value;
+    });
+    expect(newStr).toBe(str);
+  });
+
 });
 

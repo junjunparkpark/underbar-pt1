@@ -18,4 +18,14 @@ describe('isArrayLike()', () => {
     };
     expect(_.isArrayLike(nonArrayLikeObj)).toBe(false);
   });
+
+  // My test additions:
+
+  it('returns true for a string', () => {
+    expect(_.isArrayLike('123')).toBe(true);
+  });
+
+  it('returns false for a number', () => {
+    expect(_.isArrayLike(100)).toBe(false);
+  });
 });

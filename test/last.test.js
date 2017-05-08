@@ -12,4 +12,10 @@ describe('last()', () => {
   it('returns the whole array if you ask for more elements than it has', () => {
     expect(_.last(['a', 'b', 'c'], 5)).toEqual(['a', 'b', 'c']);
   });
+
+  // My test additions
+
+  it('returns an empty array when inputting 0 as the second parameter', () => {
+    expect(_.last(['a', 'b', 'c'], 0)).toEqual([]);
+  });
 });

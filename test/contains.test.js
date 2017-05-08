@@ -31,4 +31,16 @@ describe('contains()', () => {
     expect(_.contains(ponies, 'Applejack')).toBe(false);
   });
 
+  
+  // My Test Additions:
+
+  it('returns true if a string contains the target', () => {
+    const str = 'Hack Reactor'
+    expect(_.contains(str, 'H')).toBe(true);
+  });
+
+  it('returns false if a string does not contain the target', () => {
+    const str = 'Hack Reactor'
+    expect(_.contains(str, "Z")).toBe(false);
+  });
 });
